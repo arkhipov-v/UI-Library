@@ -1,0 +1,18 @@
+.burger-menu {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: none;
+  color: #fff;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+    fill: currentColor;
+  }
+}

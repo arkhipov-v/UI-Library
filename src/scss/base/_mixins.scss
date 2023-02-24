@@ -1,0 +1,55 @@
+// Text selection
+@mixin text-selection($color-selection, $color-selection-bg) {
+	::-moz-selection {
+		// sass-lint:disable-line no-vendor-prefixes
+		background: $color-selection-bg;
+		color: $color-selection;
+		text-shadow: none;
+	}
+
+	::selection {
+		background: $color-selection-bg;
+		color: $color-selection;
+		text-shadow: none;
+	}
+}
+
+// Mixin for fonts
+@mixin font-face($font-name, $file-name, $weight, $style: normal) {
+	@font-face {
+		font-family: "#{$font-name}";
+		src: url("../fonts/#{$font-name}/#{$file-name}.woff") format("woff"),
+			url("../fonts/#{$font-name}/#{$file-name}.woff2") format("woff2");
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+// Mixin for input placeholder
+@mixin input-placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+// Mixin for media queries
+@mixin media-max($screen-size) {
+	@media (max-width: $screen-size) {
+		@content;
+	}
+}
+
+@mixin media-min($screen-size) {
+	@media (min-width: $screen-size) {
+		@content;
+	}
+}

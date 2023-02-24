@@ -1,0 +1,74 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 68px;
+  background: var(--color-primary-1);
+  margin: 0;
+  padding: 5px 33px;
+  border: 1px solid transparent;
+  border-radius: 90px;
+
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
+
+  @include media-max(768px) {
+    height: 55px;
+    padding-inline: 20px;
+  }
+
+  &:hover:enabled {
+    cursor: pointer;
+    box-shadow: 0 0 12px var(--color-primary-1);
+  }
+
+  &__icon {
+    width: 27px;
+    height: 27px;
+    margin-left: 50px;
+
+    @include media-max(768px) {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+    }
+  }
+
+  &:disabled {
+    filter: grayscale(80%);
+  }
+
+  &:active:enabled {
+    transform: scale(1.02);
+  }
+
+  // Button small
+  &--sm {
+    height: 50px;
+    font-size: 15px;
+    padding-inline: 25px;
+  }
+
+  // Button circle
+  &--circle {
+    height: 68px;
+    width: 68px;
+    padding: 5px;
+    border-radius: 50%;
+
+    .button__icon {
+      margin-left: 0;
+    }
+  }
+
+  // Button empty
+  &--empty {
+    border: 1px solid var(--color-primary-1);
+    background-color: transparent;
+  }
+
+}

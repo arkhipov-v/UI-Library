@@ -1,0 +1,33 @@
+.headline {
+  text-align: center;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__descr {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  &--line::after {
+    content: '';
+    display: block;
+    width: 85px;
+    height: 2px;
+    margin-inline: auto;
+    background-color: var(--color-primary-2);
+  }
+
+  &--line-orange::after {
+    background-color: var(--color-primary-1);
+  }
+
+  &--left {
+    text-align: left;
+
+    &::after {
+      margin: 0;
+    }
+  }
+}

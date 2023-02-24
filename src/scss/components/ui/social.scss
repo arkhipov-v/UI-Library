@@ -1,0 +1,16 @@
+.social {
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 34px);
+		gap: 10px;
+	}
+
+	&__link {
+		transition: opacity 0.3s ease-in;
+		@media (any-hover) {
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+}

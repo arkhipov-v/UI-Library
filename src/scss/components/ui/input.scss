@@ -1,0 +1,41 @@
+.input-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__input {
+    height: 56px;
+    width: 100%;
+    padding-inline: 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: #FFF;
+    transition: border-color 0.3s ease;
+
+    // Ellipsis on overflow
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &:focus {
+      border-color: var(--color-primary-1);
+      outline: none;
+    }
+
+    &:disabled {
+      background-color: #ccc;
+    }
+
+    @include input-placeholder {
+      color: #CBCBCB;
+      font-size: 15px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.267;
+  }
+}
